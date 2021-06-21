@@ -12,3 +12,9 @@ course: SJTU ES342 电子线路
 
 textbooks and references:
 * _RF Microelectronics, Second Edition_, Behzad Razavi, 电子工业出版社
+
+## Stochastic Process
+course: SJTU MA356 随机过程
+
+textbooks and references:
+* 《应用随机过程》，韩东等，高等教育出版社
