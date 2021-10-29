@@ -35,6 +35,7 @@ textbooks and references:
 ## Theoretical Mechanics
 files:
 * 牛顿力学总结.md
+* 拉格朗日力学总结.md
 
 courses:
 * SJTU PHY2601 分析力学
