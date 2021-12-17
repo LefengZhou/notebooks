@@ -36,6 +36,8 @@ textbooks and references:
 files:
 * 牛顿力学总结.md
 * 拉格朗日力学总结.md
+* 拉格朗日力学的应用.md
+* 刚体力学.md
 
 courses:
 * SJTU PHY2601 分析力学
