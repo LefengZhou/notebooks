@@ -22,6 +22,13 @@ courses:
 textbooks and references:
 * _RF Microelectronics, Second Edition_, Behzad Razavi, 电子工业出版社
 
+## Digital Optical Communication System
+files:
+* 数字光通信系统总结.md
+
+courses:
+* SJTU IS312 数字光通信系统
+
 ## Stochastic Process
 files:
 * 随机过程总结.md
