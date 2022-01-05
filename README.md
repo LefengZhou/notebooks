@@ -22,6 +22,13 @@ courses:
 textbooks and references:
 * _RF Microelectronics, Second Edition_, Behzad Razavi, 电子工业出版社
 
+## Digital Optical Communication System
+files:
+* 数字光通信系统总结.md
+
+courses:
+* SJTU IS312 数字光通信系统
+
 ## Stochastic Process
 files:
 * 随机过程总结.md
@@ -36,6 +43,8 @@ textbooks and references:
 files:
 * 牛顿力学总结.md
 * 拉格朗日力学总结.md
+* 拉格朗日力学的应用.md
+* 刚体力学总结.md
 
 courses:
 * SJTU PHY2601 分析力学
@@ -43,3 +52,5 @@ courses:
 textbooks and references:
 * 《力学（第四版）（下册）理论力学》，梁昆淼等，高等教育出版社
 * 《理论力学（第二版）》，金尚年等，高等教育出版社
+* 《力学》，朗道等，高等教育出版社
+* 《费曼物理学讲义第二卷》第十九章：最小作用原理（专题演讲）
