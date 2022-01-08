@@ -29,6 +29,16 @@ files:
 courses:
 * SJTU IS312 数字光通信系统
 
+## Information Theory
+files:
+* information_theory.md
+
+courses:
+* SJTU EE453 信息论基础
+
+textbooks and references:
+* _Elements of Information Theory_, Thomas M. Cover, 清华大学出版社
+
 ## Stochastic Process
 files:
 * 随机过程总结.md
@@ -45,6 +55,7 @@ files:
 * 拉格朗日力学总结.md
 * 拉格朗日力学的应用.md
 * 刚体力学总结.md
+* 哈密顿力学总结.md
 
 courses:
 * SJTU PHY2601 分析力学
@@ -53,4 +64,3 @@ textbooks and references:
 * 《力学（第四版）（下册）理论力学》，梁昆淼等，高等教育出版社
 * 《理论力学（第二版）》，金尚年等，高等教育出版社
 * 《力学》，朗道等，高等教育出版社
-* 《费曼物理学讲义第二卷》第十九章：最小作用原理（专题演讲）
