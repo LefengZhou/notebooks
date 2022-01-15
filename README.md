@@ -56,6 +56,8 @@ files:
 * 拉格朗日力学的应用.md
 * 刚体力学总结.md
 * 哈密顿力学总结.md
+* 哈密顿力学后续.md
+* analytical_mechanics_final_report.tex
 
 courses:
 * SJTU PHY2601 分析力学
@@ -64,3 +66,4 @@ textbooks and references:
 * 《力学（第四版）（下册）理论力学》，梁昆淼等，高等教育出版社
 * 《理论力学（第二版）》，金尚年等，高等教育出版社
 * 《力学》，朗道等，高等教育出版社
+* American Journal of Physics **75**, 888 (2007); doi: 10.1119/1.2757623
