@@ -1,0 +1,126 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+
+\usepackage{geometry}
+% \geometry{centering,scale=0.85}
+\setlength{\parskip}{0.5\baselineskip}
+
+\usepackage{amsmath}
+
+
+
+\title{分析力学大作业}
+\author{周乐峰 518021910202}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+ 
+\section{刘维尔定理的证明}
+
+对于大自由度的系统,我们无法给出初始条件,也就不知道相空间中哪个点准确地代表了系统的状况。所以我们考虑该系统各种可能的初值，研究大量有不同初值的相同系统的集合如何演变。这个集合称为系综，各种可能的初值所对应的相轨道就是系综的演化。
+
+刘维尔定理——相空间的分布函数沿着系统的轨迹是常数。系综在相空间运动的过程中，任意一个给定代表点邻近的代表点密度不变。
+
+假设相空间中系统代表点的分布函数（概率密度函数） $\rho = \rho(q,p,t)$。在时间 $t$，系统的代表点有 $\rho dV$ 的概率出现在 $dV = d^s q d^s p$ 中。我们要证明对于任意一个代表点 $(q(t),p(t))$，它所在之处的概率密度是不变的，也就是说分布函数沿着系统演化的轨迹是常数，即 $d\rho(q(t),p(t),t)/dt = 0$。
+
+考虑 $(q,p)$ 处体积元 $dV$ 的概率流。该体积元由 $2s$ 个面围成。通过垂直于 $q_k$ 的一个面的概率为 $\rho \dot q_k dA_{q_k} dt$，其中 $dA_{q_k}$ 是垂直于 $q_k$ 方向的面元。然而，垂直于 $q_k$ 方向有两个面，两个面总通量为 $\partial_{q_k}(\rho \dot q_k)dA_{q_k}dt$。对 $2s$ 个面求和，利用连续性方程得到体积元内概率的增量
+\begin{align}\label{fluiddiv}
+    \partial_t \rho dV &= -\sum_{k = 1}^s (\partial_{q_k}(\rho \dot q_k)dA_{q_k}dt + \partial_{p_k}(\rho \dot p_k)dA_{p_k}dt) \\
+    &= -\sum_{k = 1}^s \left(\frac{\partial(\rho \dot q_k)}{\partial q_k}dVdt + \frac{\partial(\rho \dot p_k)}{\partial p_k}dVdt\right) \\
+    \Longrightarrow 
+    \frac{\partial \rho}{\partial t} &= -\sum_{k = 1}^s \left(\frac{\partial(\rho \dot q_k)}{\partial q_k} + \frac{\partial(\rho \dot p_k)}{\partial p_k}\right) \\
+    &= -\sum_{k = 1}^s \left(\rho\frac{\partial \dot q_k}{\partial q_k} + \frac{\partial \rho}{\partial q_k}\dot q_k + \rho\frac{\partial \dot p_k}{\partial p_k} + \frac{\partial \rho}{\partial p_k}\dot p_k\right)
+\end{align}
+与分布函数的时间全导对比
+\begin{align}
+    \frac{d\rho}{dt} = \frac{\partial \rho}{\partial t} + \sum_{k = 1}^s \left(\frac{\partial \rho}{\partial q_k}\dot q_k + \frac{\partial \rho}{\partial p_k}\dot p_k\right)
+\end{align}
+得到
+\begin{align}\label{divergence}
+    \frac{d\rho}{dt} = -\rho\sum_{k = 1}^s \left(\frac{\partial \dot q_k}{\partial q_k} + \frac{\partial \dot p_k}{\partial p_k}\right)
+\end{align}
+代入哈密顿正则方程可知
+\begin{align}
+    \frac{d\rho}{dt} = 0
+\end{align}
+刘维尔定理得证。
+
+事实上，连续性方程 \ref{fluiddiv} 成立是因为代表点在运动过程中不会产生或湮灭，而且轨迹连续。这类似于高斯定理。等式 \ref{divergence} 的右侧为零是因为哈密顿正则方程可以直接推出相空间中速度场 $(\dot q,\dot p)$ 的散度是 0。所以系综演化类似不可压缩流体流动，尽管这个流体在不同的代表点处有不同的密度，流动过程中密度自然会沿着代表点运动轨迹不变。
+
+\section{可变长单摆的绝热不变量}
+
+周期运动的作用量变量是绝热不变量。所以我们计算单摆的作用量变量。
+
+写出拉格朗日量
+\begin{align}
+    L = \frac{1}{2}ml^2\dot\theta^2 + mgl\cos\theta
+\end{align}
+计算广义动量，做勒让德变换，写出哈密顿量
+\begin{align}
+    H = \frac{p^2}{2ml^2} - mgl\cos\theta
+\end{align}
+假设单摆小角度摆动，做近似，并抛弃哈密顿量里的常数
+\begin{align}
+    H &= \frac{p^2}{2ml^2} - mgl(1 - \frac{\theta^2}{2}) \\
+    \Longrightarrow
+    H &= \frac{p^2}{2ml^2} + \frac{1}{2}mgl\theta^2
+\end{align}
+设哈密顿特征函数 $W = W(q)$，写出哈密顿—雅可比方程 $H(q,\partial W/\partial q) = E$，得到
+\begin{align}
+    p = \frac{\partial W}{\partial q} = \sqrt{2ml^2(E - \frac{1}{2}mgl\theta^2)}
+\end{align}
+假设单摆摆幅 $\phi$，那么有 $E = mgl\phi^2/2$，计算作用量变量
+\begin{align}
+    J &= \oint pdq \\
+    &= \oint \sqrt{m^2gl^3(\phi^2 - \theta^2)}d\theta \\
+    &= \pi mg^{1/2}l^{3/2}\phi^2
+\end{align}
+这就是可变长单摆的绝热不变量。这里体现的是摆长和摆幅有一个固定的关系。
+
+可以用 $J$ 表示出 $E$，
+\begin{align}
+    E(J) = \frac{1}{2\pi}\sqrt{\frac{g}{l}}J
+\end{align}
+周期运动的角频率是
+\begin{align}
+    2\pi\frac{\partial E}{\partial J} = \sqrt{\frac{g}{l}}
+\end{align}
+
+\section{傅科摆摆面转动与几何相位}
+
+这里总结 American Journal of Physics \textbf{75}, 888 (2007) 关于傅科摆的讨论。
+
+首先暂时不考虑单摆在球面上移动，而是考虑一个欧几里得平面。重力垂直向下，让单摆在一个平面内摆动，这个平面确定了单摆的朝向。我们断言，如果单摆的悬挂点在欧几里得平面上沿直线缓慢平移，单摆的朝向不会改变。那么，当悬挂点走直线时单摆的朝向与运动路径方向的夹角不变。
+
+接着，我们要考虑球面上的直线。如果能定义出球面上的直线，也许会有相似的结论成立——悬挂点走直线时单摆朝向与运动路径的夹角不变。借助牛顿第一定律，我们定义约束在球面上的质点不受外力时的运动路径是直线。那么容易得到结论，球面的直线是大圆。当质点运动时，可以以它此刻的运动方向画出大圆，不受外力的质点对大圆区分的左右两个半圆没有倾向性，所以只会沿着大圆即两个半圆的交界运动。一个显然的例子是，赤道是大圆，沿着赤道移动的单摆朝向与赤道夹角不变。其他纬线不是大圆，单摆朝向与纬线夹角会改变。
+
+考虑球面上的三角形。球面上的三角形由三个大圆弧段构成，这个三角形构成一条运动路径 $C$。如果单摆沿着这条运动路径平移一圈，在三角形的三边上单摆朝向与运动路径夹角不变，只有在三角形的三个角上夹角突然改变。所以，假设三角形三个角 $\theta_1,\theta_2,\theta_3$，在逆时针平移经过第一个角后朝向与运动路径夹角减小 $\pi - \theta_1$（逆时针为正）。那么在平移一圈后夹角增加
+\begin{align}
+    \alpha(C) =  \theta_1 + \theta_2 + \theta_3 - 3\pi
+\end{align}
+注意角度一般可以模 $2\pi$，但此处不做这个操作。
+
+有一个关于球面几何性质的定理（来自 Gauss-Bonnet 定理）
+\begin{align}
+    \theta_1 + \theta_2 + \theta_3 - \pi = \frac{S(C)}{r^2}
+\end{align}
+其中 $r$ 为球面半径，$S(C)$ 为三角形路径 $C$ 所围成的面积。在球面上，可以定义立体角 $\Omega(C) = S(C)/r^2$。总之，我们现在可以将平移一圈增加的夹角 $\alpha(C)$（称为相移）和路径围成的立体角联系在一起，
+\begin{align}
+    \alpha(C) + 2\pi = \Omega(C)
+\end{align}
+具体路径形状和动力学细节在这里都不起作用。接下来，$C$ 可以推广到多边形，然后再推广到任意闭合路径。
+
+应用上述理论可以计算傅科摆的朝向转动。在纬度为 $\gamma$ 的地方放置一傅科摆，一天之后傅科摆沿纬线平移一圈，则有
+\begin{align}
+    \Omega(\gamma) &= 2\pi (1 - \sin\gamma) \\
+    \alpha(\gamma) &= -2\pi\sin\gamma
+\end{align}
+
+傅科摆可以作为几何相位的一个典例。我们可以将激光在光纤中传播时的偏振变化类比到傅科摆上。假设一段光纤，入射和出射是同一个方向。现在入射线偏振光，光在光纤中传播时波矢将一直沿着这条光纤。由于光速不变，固定波矢始端后其终端将在一个球面上运动。我们假设偏振的唯一约束是垂直于波矢，没有其他作用比如光纤应力来改变偏振，这类似于不受外力的傅科摆的朝向。由于激光入射出射是同一个方向，波矢终端在球面上画出一条闭合曲线。类似于傅科摆，激光偏振的转动和波矢运动所围成的立体角大小有关，和光纤具体是怎么走的无关。
+
+
+\end{document}
+
